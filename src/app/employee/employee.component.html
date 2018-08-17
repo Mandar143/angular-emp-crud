@@ -1,0 +1,61 @@
+<div class="login-page">    
+  <div class="row justify-content-md-center">
+
+      <div class="col-md-4">
+              <div class="login-page-inner">
+          <div class="login-page-div">
+              <form #frm="ngForm" (ngSubmit)="alogin(frm.value)" autocomplete="off"  id="loginForm">
+                  <div class="form-content">
+                      <div class="form-group">
+                          
+                        <div class="md-form">
+                          <!-- <input type="text" id="empName" #empName="ngModel"   ngModel name="empName"  class="form-control" placeholder="name"> -->
+                          <input [mdbValidate]="false" mdbInputDirective type="text" pattern="[a-zA-Z0-9 ]*" [(ngModel)]="name"  id="empName" class="form-control  input-underline"
+                            name="empName" #empName="ngModel" ngModel required>
+                            <label for="empName">Employee Name</label>
+                        </div>                   
+                      </div>
+                    
+                      <div class="form-group">
+                        <div class="md-form">
+
+                          <!-- <input type="text" id="empSalary" #empSalary="ngModel"  ngModel name="empSalary"  class="form-control" placeholder="salary"> -->
+                          <input [mdbValidate]="false" mdbInputDirective type="text" pattern="[a-zA-Z0-9 ]*"  [(ngModel)]="salary"  id="empSalary" class="form-control  input-underline"
+                          name="empSalary" #empSalary="ngModel" ngModel required>
+                          <label for="empSalary">Employee Salary</label>
+                        </div>                    
+                      </div>
+                  </div>
+                  <input type="hidden"  #id="ngModel" ngModel name="_id" [(ngModel)]="id1"   class="form-control">
+                  <div class="form-group">
+                  <!-- <a class="float-left a-link" [routerLink]="['/signup']">Forgot Password</a> -->
+                  <button type="submit"  class="btn btn-primary rounded-btn text-uppercase float-right"> Submit </button>
+                  &nbsp;
+              </div>
+              </form>
+          </div>
+      </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-md-12 ">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employeeData of employeeData;let i=index;">
+        <th scope="row">{{ i + 1}}</th>
+        <td>{{employeeData.name}}</td>
+        <td>{{employeeData.salary}}</td>
+        <td><button type="button" class="btn btn-primary" (click)="editRow(employeeData._id)"><i class="fa fa-edit"></i></button><button type="button" (click)="deleteRow(employeeData._id)" class="btn btn-danger"><i class="fa fa-trash"></i></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

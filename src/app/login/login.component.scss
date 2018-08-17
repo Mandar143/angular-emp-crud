@@ -1,0 +1,124 @@
+$topnav-background-img:linear-gradient(to top, #0d5a96, #4e7fae, #80a5c7, #b3ccdf, #eaf3f9);
+$topnav-background-color:#d71920; 
+:host {
+    display: block;
+}
+
+.login-page {    
+    position: absolute;  
+    left: 0;
+    right: 0;
+    bottom:0;
+    top: 0;
+    width: 100%; 
+    overflow: auto;
+    background: $topnav-background-img;
+    text-align: center;
+    color: #9b9b9b;
+    padding: 3em;
+    .col-lg-4 {
+        padding: 0;
+    }
+
+
+    .login-page-div {
+        background: #fff; 
+        padding:30px; 
+        box-shadow:0 2px 3px #000; 
+        border-radius: 4px; 
+        margin: 30px 0 0;
+    }
+
+    .input-underline {
+        background:transparent;
+        border: none;
+        box-shadow: none;
+        border-bottom: 2px solid #f1f1f1;
+        color: #9b9b9b;
+        border-radius: 0;
+        padding-left: 30px;
+    }
+
+   .input-underline:focus {         
+        border-bottom: 2px solid #0062a8;
+        color:#0062a8;
+        box-shadow: none;       
+    }   
+        
+    .rounded-btn {
+        color:#fff;
+        background: $topnav-background-color;
+        font-size: 16px;
+        line-height: 40px;
+        padding: 0 25px;
+        border-radius: 0px;
+    }
+    .a-link {
+        color:#404040; 
+        font-size:16px; 
+        text-decoration: underline;
+    }
+
+    .form-group {
+        padding: 8px 0;
+        input::-webkit-input-placeholder {
+            color:#9b9b9b;
+        }
+
+        input:-moz-placeholder {
+            /* Firefox 18- */
+            color:#9b9b9b;
+        }
+
+        input::-moz-placeholder {
+            /* Firefox 19+ */
+            color:#9b9b9b;
+        }
+
+        input:-ms-input-placeholder {
+            color:#9b9b9b;
+        }
+    }
+    .form-content {
+        padding:0;
+    }
+
+    .form-group-box {position:relative;
+        .fa 
+        {
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            margin: auto;
+            color: #9b9b9b;
+        }
+    
+    }
+
+    .login-page-div .md-form .prefix {
+        left:0px;
+        font-size: 1.4em;
+        top:3px;
+        padding:0;
+    }
+    .login-page-div .md-form .prefix ~ label {
+        margin-left: 1.7rem;
+        top: 0;
+    }
+    .login-page-div .md-form .prefix ~ input {
+        width: calc(100% - 1.8rem);
+        padding-left: 1.8em;
+        margin: 0;
+    }
+
+     .login-page-div .md-form {margin-bottom: 0px;}
+
+    .login-page-div .login-page, .login-page-div .form-group {
+    padding:8px 0 0;
+}
+
+
+
+}
+
+ 
